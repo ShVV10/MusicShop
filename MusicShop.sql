@@ -31,17 +31,17 @@ CREATE TABLE IF NOT EXISTS compilation (
 CREATE TABLE IF NOT EXISTS album_artist (
 	album_id INTEGER REFERENCES album(id),
 	artist_id INTEGER REFERENCES artist(id),
-	CONSTRAINT pk_album PRIMARY KEY (album_id, artist_id)
+	CONSTRAINT pk PRIMARY KEY (album_id, artist_id)
 );
 
 CREATE TABLE IF NOT EXISTS compilation_track (
 	compilation_id INTEGER REFERENCES compilation(id),
 	track_id INTEGER REFERENCES track(id),
-	CONSTRAINT pk_compilation PRIMARY KEY (compilation_id, track_id)
+	CONSRTRAINT pk PRIMARY KEY (compilation_id, track_id)
 );
 
 CREATE TABLE IF NOT exists genre_artist (
 	genre_id INTEGER REFERENCES music_genre(id),
 	artist_id INTEGER REFERENCES artist(id),
-	CONSTRAINT pk_genre PRIMARY KEY (genre_id, artist_id)
+	CONSRTRAINT pk PRIMARY KEY (genre_id, artist_id)
 );
